@@ -1,32 +1,54 @@
-# SolidStart
+# flugel.biz
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+稼働している自分自身の屋号サイトのリポジトリです。
 
-## Creating a project
+**Note:** 本リポジトリは、自分自身の屋号サイトであるため Issues 及び Pull Requests は受け付けておりません。
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+## Stacks
 
-# create a new project in my-app
-npm init solid@latest my-app
+- SolidStart 1.3.2 (SSG)
+- TypeScript
+- Sass
+- ky
+- Valibot
+- Shiki
+
+## Features
+
+- Liquid Glass デザインを模した透明感
+- 再帰的に Readonly を付与する DeepGuard による型安全性
+- SSR 安全なグローバルストア機構（piquo）
+- ルーティングファイルは極限まで薄く、本体は components/ に配置
+
+## Related Articles
+
+- 同一サイトの 9 フレームワークパターンでのリプレイス祭: https://wings.hatenablog.com/entry/replaceFestival
+- Astro 上の Solid / Svelte / Vue にグローバルストアを持たせたい: https://wings.hatenablog.com/entry/AstroGlobalStores
+- JS フレームワークにおいてフォルダ構成の思想: https://wings.hatenablog.com/entry/FolderIdea
+
+## Folder Map
+
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+src/
+├─ _global/
+│ ├─ lib/
+│ ├─ piquo/
+│ ├─ styles/
+│ ├─ types/
+├─ _test/
+├─ components/
+│ ├─ routes/
+│ │ ├─ _models/
+│ │ ├─ _parts/
+│ │ ├─ archives/
+│ │ │ ├─ _models/
+│ │ │ ├─ _parts/
+│ │ ├─ types/
+│ │ │ ├─ _models/
+│ │ │ ├─ _parts/
+│ ├─ shared/
+│ │ │ ├─ Sections/
+│ │ │ ├─ Typography/
+│ │ │ ├─ Utils/
+├─ routes/
 ```
-
-## Building
-
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
-
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
-
-## This project was created with the [Solid CLI](https://github.com/solidjs-community/solid-cli)
