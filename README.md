@@ -31,6 +31,7 @@
 この屋号サイトを題材として、各フレームワークへのリプレイス祭を開催しました。
 
 - [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
+- [Qwik 版](https://github.com/wings1685/flugel-website-qwik)
 
 ## Folder Map
 
