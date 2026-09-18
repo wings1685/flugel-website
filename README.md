@@ -33,6 +33,9 @@
 - [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
 - [Qwik 版](https://github.com/wings1685/flugel-website-qwik)
 - [Next.js 版](https://github.com/wings1685/flugel-website-next)
+- [Nuxt 版](https://github.com/wings1685/flugel-website-nuxt)
+- [Astro + Solid / Svelte / Vue 版](https://github.com/wings1685/flugel-website-astro)
+- [Astro + React 版](https://github.com/wings1685/flugel-website-astro-react)
 
 ## Folder Map
 
