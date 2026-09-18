@@ -4,7 +4,7 @@
 
 **Note:** 本リポジトリは、自分自身の屋号サイトであるため Issues 及び Pull Requests は受け付けておりません。
 
-## Stacks
+## Tech Stack
 
 - SolidStart 1.3.2 (SSG)
 - TypeScript
@@ -22,9 +22,15 @@
 
 ## Related Articles
 
-- 同一サイトの 9 フレームワークパターンでのリプレイス祭: https://wings.hatenablog.com/entry/replaceFestival
-- Astro 上の Solid / Svelte / Vue にグローバルストアを持たせたい: https://wings.hatenablog.com/entry/AstroGlobalStores
-- JS フレームワークにおいてフォルダ構成の思想: https://wings.hatenablog.com/entry/FolderIdea
+- [同一サイトの 9 フレームワークパターンでのリプレイス祭](https://wings.hatenablog.com/entry/replaceFestival)
+- [Astro 上の Solid / Svelte / Vue にグローバルストアを持たせたい](https://wings.hatenablog.com/entry/AstroGlobalStores)
+- [JS フレームワークにおいてフォルダ構成の思想](https://wings.hatenablog.com/entry/FolderIdea)
+
+## Replaced Festival Repositories
+
+この屋号サイトを題材として、各フレームワークへのリプレイス祭を開催しました。
+
+- [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
 
 ## Folder Map
 
@@ -47,8 +53,8 @@ src/
 │ │ │ ├─ _models/
 │ │ │ ├─ _parts/
 │ ├─ shared/
-│ │ │ ├─ Sections/
-│ │ │ ├─ Typography/
-│ │ │ ├─ Utils/
+│ │ ├─ Sections/
+│ │ ├─ Typography/
+│ │ ├─ Utils/
 ├─ routes/
 ```
