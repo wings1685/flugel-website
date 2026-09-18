@@ -1,7 +1,5 @@
 import { createSignal, onMount } from "solid-js";
-
 import { flugel } from "@/_global/lib/shared";
-
 import { Glass, Group } from "./";
 
 export default function Footer() {

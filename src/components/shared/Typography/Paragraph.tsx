@@ -1,10 +1,7 @@
 import { Dynamic } from "solid-js/web";
-
 import { propsClass } from "@/_global/lib/utils";
-
 import type { ParagraphAttributes, DivAttributes } from "@/_global/types/components";
 import type { DeepGuard } from "@/_global/types/types";
-
 import "./Paragraph.sass";
 
 type Props = (ParagraphAttributes & {

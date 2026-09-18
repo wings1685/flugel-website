@@ -1,11 +1,8 @@
 import { createEffect, createSignal, onMount, Show } from "solid-js";
-
 import { months } from "@/_global/lib/shared";
 import { sleep } from "@/_global/lib/utils";
 import { useStore } from "@/_global/piquo";
-
 import type { Months } from "@/_global/lib/shared";
-
 import "./Bg.sass";
 
 export default function Bg() {

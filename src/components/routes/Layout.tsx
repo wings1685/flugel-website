@@ -2,10 +2,8 @@ import { Link, MetaProvider } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
-
 import { Footer, Header, Nav } from "@/components/shared/Sections";
 import { Bg } from "@/components/shared/Utils";
-
 import "@/_global/styles/global.sass";
 
 export default function App() {

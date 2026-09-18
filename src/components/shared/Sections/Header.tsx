@@ -1,10 +1,7 @@
 import { useLocation } from "@solidjs/router";
 import { createMemo } from "solid-js";
-
 import { useStore } from "@/_global/piquo";
-
 import { Glass } from "./";
-
 import "./Header.sass";
 
 export default function Header() {

@@ -1,8 +1,6 @@
 import { propsClass } from "@/_global/lib/utils";
-
 import type { Directions, DivAttributes, Sizes } from "@/_global/types/components"
 import type { DeepGuard } from "@/_global/types/types";
-
 import "./Group.sass";
 
 type Props = DivAttributes & {

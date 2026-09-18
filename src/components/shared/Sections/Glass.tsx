@@ -1,15 +1,11 @@
 import { Dynamic } from "solid-js/web";
 import { A } from "@solidjs/router";
-
 import { propsClass } from "@/_global/lib/utils";
-
 import { Section } from "./";
 import { Icon } from "../Utils";
-
 import type { DeepGuard } from "@/_global/types/types";
 import type { AsDiv, AsSection, AsLink } from "@/_global/types/components";
 import type { ComponentProps } from "solid-js";
-
 import "./Glass.sass";
 
 type IconProps = Pick<ComponentProps<typeof Icon>, 'type'>;

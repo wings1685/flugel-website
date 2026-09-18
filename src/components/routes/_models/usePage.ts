@@ -1,9 +1,7 @@
 import ky from "ky";
 import * as v from "valibot";
-
 import { blogEndpoint } from "@/_global/lib/shared";
 import { BlogEntriesSchema } from "./schema";
-
 import type { BlogEntry } from "./schema";
 import type { DeepGuard } from "@/_global/types/types";
 

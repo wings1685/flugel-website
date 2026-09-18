@@ -1,9 +1,7 @@
 import { Icon } from "../Utils";
-
 import type { DeepGuard } from "@/_global/types/types";
 import type { HAttributes } from "@/_global/types/components";
 import type { ComponentProps } from "solid-js";
-
 import "./PageTitle.sass";
 
 type IconProps = Pick<ComponentProps<typeof Icon>, 'type'>;

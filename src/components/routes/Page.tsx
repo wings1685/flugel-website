@@ -1,5 +1,4 @@
 import { PageMeta } from "@/components/shared/Utils";
-
 import { About, Blog, Terms } from "./_parts";
 
 export default function Page() {

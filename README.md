@@ -32,6 +32,7 @@
 
 - [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
 - [Qwik 版](https://github.com/wings1685/flugel-website-qwik)
+- [Next.js 版](https://github.com/wings1685/flugel-website-next)
 
 ## Folder Map
 

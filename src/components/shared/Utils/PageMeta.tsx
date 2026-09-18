@@ -1,8 +1,6 @@
 import { createMemo } from "solid-js";
 import { Meta, Title } from "@solidjs/meta";
-
 import { siteDescription, siteTitle } from "@/_global/lib/shared";
-
 import type { DeepGuard } from "@/_global/types/types";
 
 type Props = {

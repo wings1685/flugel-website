@@ -1,11 +1,8 @@
 import { monthData } from "@/_global/lib/shared";
 import { useStore } from "@/_global/piquo";
-
 import { For } from "solid-js";
 import { Glass } from "./";
-
 import type { Months } from "@/_global/lib/shared";
-
 import "./Nav.sass";
 
 export default function Nav() {
