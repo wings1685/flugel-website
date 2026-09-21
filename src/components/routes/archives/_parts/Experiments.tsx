@@ -10,11 +10,11 @@ export default function Experiments() {
 			<PageTitle icon="folder">実験一覧</PageTitle>
 			<VerticalList>
 				<Index each={ experiments }>
-					{site => (
+					{experiment => (
 						<li>
-							<Paragraph class="archives_paragraph">{ site().description }</Paragraph>
+							<Paragraph class="archives_paragraph">{ experiment().description }</Paragraph>
 							<HorizontalList class="monospace">
-								<Index each={ site().stacks }>
+								<Index each={ experiment().stacks }>
 									{stack => (
 										<li>{ stack() }</li>
 									)}
