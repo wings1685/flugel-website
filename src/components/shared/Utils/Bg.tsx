@@ -10,7 +10,14 @@ export default function Bg() {
 	const { selectedMonth, setSelectedMonth } = useStore('selectedMonth');
 
 	let elBg: HTMLImageElement;
-	const getSrcset = (month?: Months) => month ? `/images/bg/${ month }.webp 1920w, /images/bg/${ month }_sp.webp 768w` : '';
+	const imagePath = '/images/bg/';
+	const getImagePc = (month?: Months) => month ? `${imagePath}${ month }.webp` : '';
+	const getImageSp = (month?: Months) => month ? `${imagePath}${ month }_sp.webp` : '';
+	const getSrcset = (month?: Months) => {
+		if (import.meta.env.SSR || !month) return '';
+
+		return window.innerWidth <= 750 ? getImageSp(month) : getImagePc(month);
+	};
 
 	onMount(() => {
 		const month = months[(new Date()).getMonth()];
@@ -38,10 +45,13 @@ export default function Bg() {
 
 	return (
 		<div id="bg">
-			<img ref={ (el) => elBg = el } alt="" srcset={ getSrcset(currentMonth()) } data-testid="bg" />
+			<picture>
+				<source media="(max-width: 750px)" srcset={ getImageSp(currentMonth()) } />
+				<img ref={ (el) => elBg = el } src={ getImagePc(currentMonth()) }alt="" data-testid="bg" />
+			</picture>
 			<Show when={ selectedMonth() }>
 				{next => (
-					<img id="selected_bg" srcset={ getSrcset(next()) } alt="" />
+					<img id="selected_bg" src={ getSrcset(next()) } alt="" />
 				)}
 			</Show>
 		</div>
