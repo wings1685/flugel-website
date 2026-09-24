@@ -2,13 +2,10 @@
     RewriteEngine On
     RewriteBase /
 
-    # 存在するファイルやディレクトリはそのままアクセス
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 
-    # 存在しないURLは、トップ(index.html)ではなく、404用のHTMLへ流す
     RewriteRule . /404/index.html [L]
 </IfModule>
 
-# 明示的な404エラーハンドラも index.html に合わせて指定
 ErrorDocument 404 /404/index.html
