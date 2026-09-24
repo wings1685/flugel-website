@@ -1,10 +1,10 @@
-import { PageMeta } from "@/components/shared/Utils";
 import { Archives, Experiments, Environment } from "./_parts";
+import SiteMeta from "../SiteMeta";
 
 export default function Page() {
 	return (
 		<main>
-			<PageMeta title="Archives" />
+			<SiteMeta dir="/archives/" />
 			<Environment />
 			<Experiments />
 			<Archives />

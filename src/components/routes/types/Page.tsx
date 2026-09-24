@@ -4,10 +4,10 @@ import { codes as codesDeepGuard } from "./_models/codeDeepGuard";
 import { codes as codesProps } from "./_models/codeProps";
 import { codes as codesExclude } from "./_models/codeExclude";
 import { unescapeTag } from "@/_global/lib/utils";
-import { PageMeta } from "@/components/shared/Utils";
 import { DeepGuard, Exclude, Props } from "./_parts";
 import { Box, Glass } from "@/components/shared/Sections";
 import { PageTitle, Paragraph } from "@/components/shared/Typography";
+import SiteMeta from "../SiteMeta";
 
 export default function Page() {
 	const [ typesCodeDeepGuard, setTypesCodeDeepGuard ] = createSignal<string>(codesDeepGuard.types);
@@ -41,7 +41,7 @@ export default function Page() {
 
 	return (
 		<main>
-			<PageMeta title="Types" />
+			<SiteMeta dir="/types" />
 			<Glass as="section">
 				<Box>
 					<PageTitle icon="code">型の制御例</PageTitle>
