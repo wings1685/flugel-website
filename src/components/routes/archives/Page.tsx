@@ -4,7 +4,7 @@ import SiteMeta from "../SiteMeta";
 export default function Page() {
 	return (
 		<main>
-			<SiteMeta dir="/archives/" />
+			<SiteMeta dir="/archives" />
 			<Environment />
 			<Experiments />
 			<Archives />
