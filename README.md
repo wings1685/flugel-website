@@ -19,12 +19,14 @@
 - 再帰的に Readonly を付与する DeepGuard による型安全性
 - SSR 安全なグローバルストア機構（piquo）
 - ルーティングファイルは極限まで薄く、本体は components/ に配置
+- Meta を起点から現在ページまで生成
 
 ## Related Articles
 
 - [同一サイトの 9 フレームワークパターンでのリプレイス祭](https://wings.hatenablog.com/entry/replaceFestival)
 - [Astro 上の Solid / Svelte / Vue にグローバルストアを持たせたい](https://wings.hatenablog.com/entry/AstroGlobalStores)
 - [JS フレームワークにおいてフォルダ構成の思想](https://wings.hatenablog.com/entry/FolderIdea)
+- [Meta 生成機構祭](https://wings.hatenablog.com/entry/metaFestival)
 
 ## Replaced Festival Repositories
 
