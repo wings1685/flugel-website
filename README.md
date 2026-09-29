@@ -1,6 +1,7 @@
 # flugel.biz
 
 稼働している自分自身の屋号サイトのリポジトリです。
+なお、本サイトは Solid 2 へ移行しました。リポジトリは下記にリンクがあります。
 
 **Note:** 本リポジトリは、自分自身の屋号サイトであるため Issues 及び Pull Requests は受け付けておりません。
 
@@ -32,6 +33,7 @@
 
 この屋号サイトを題材として、各フレームワークへのリプレイス祭を開催しました。
 
+- [Solid 2 版](https://github.com/wings1685/flugel-website-solid2)
 - [SvelteKit 版](https://github.com/wings1685/flugel-website-sveltekit)
 - [Qwik 版](https://github.com/wings1685/flugel-website-qwik)
 - [Next.js 版](https://github.com/wings1685/flugel-website-next)
@@ -51,12 +53,16 @@ src/
 ├─ _test/
 ├─ components/
 │ ├─ routes/
+│ │ ├─ _data/
 │ │ ├─ _models/
 │ │ ├─ _parts/
 │ │ ├─ archives/
+│ │ │ ├─ _data/
 │ │ │ ├─ _models/
 │ │ │ ├─ _parts/
+│ │ ├─ error/
 │ │ ├─ types/
+│ │ │ ├─ _data/
 │ │ │ ├─ _models/
 │ │ │ ├─ _parts/
 │ ├─ shared/
