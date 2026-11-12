@@ -1,20 +1,22 @@
-import { describe, it, expect } from "vitest";
-import { render, waitFor } from "@solidjs/testing-library";
-import { ContextProvider } from "@/_global/contexts";
+import { describe, it, expect, afterEach } from "vitest";
+import { cleanup, render, waitFor } from "@solidjs/testing-library";
+import { createMemoryHistory, MemoryRouter, Route } from "@solidjs/router";
 import { Blog } from "@/components/routes/_parts";
-import type { FlagContextsType } from "@/_global/contexts/flags";
 
 describe('Blog コンポーネントのリアルデータ取得テスト', () => {
+	afterEach(() => {
+		cleanup();
+	});
+
 	it('実際にAPIやネットワークからデータを取得し、画面に記事がレンダリングされるか', async () => {
-		let flagContexts: FlagContextsType;
-		const TestWrapper = () => {
-			return <Blog />;
-		};
-		const { queryAllByRole } = render(() =>
-			<ContextProvider>
-				<TestWrapper />
-			</ContextProvider>
-		);
+		const history = createMemoryHistory();
+		history.set({ value: '/', replace: true });
+
+		const { queryAllByRole } = render(() => (
+			<MemoryRouter history={ history }>
+				<Route path="/" component={() => <Blog />} />
+			</MemoryRouter>
+		));
 		await waitFor(() => {
 			const articles = queryAllByRole('article');
 			expect(articles.length).toBeGreaterThan(0);

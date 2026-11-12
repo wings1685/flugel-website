@@ -1,15 +1,16 @@
-import { describe, it, expect } from "vitest";
-import { render, fireEvent, waitFor } from "@solidjs/testing-library";
-import { ContextProvider } from "@/_global/contexts";
+import { describe, it, expect, afterEach } from "vitest";
+import { render, fireEvent, waitFor, cleanup } from "@solidjs/testing-library";
+import { useStore } from "@/_global/piquo";
 import { Nav } from "@/components/shared/Sections";
 import { Bg } from "@/components/shared/Utils";
 import { monthData } from "@/_global/lib/shared";
-import type { FlagContextsType } from "@/_global/contexts/flags";
-import { useStore } from "@/_global/piquo";
 
 describe('Nav コンポーネントと Bg コンポーネントの月変更連動テスト', () => {
+	afterEach(() => {
+		cleanup();
+	});
+
 	it('リンクを押したら月表示が変わるか', async () => {
-		let flagContexts: FlagContextsType;
 		const TestWrapper = () => {
 			return (
 				<>
@@ -18,14 +19,10 @@ describe('Nav コンポーネントと Bg コンポーネントの月変更連�
 				</>
 			);
 		};
-		const { queryAllByRole, getByTestId } = render(() =>
-			<ContextProvider>
-				<TestWrapper />
-			</ContextProvider>
-		);
+		const { getAllByTestId, getByTestId } = render(() => <TestWrapper />);
 
 		// 1. Nav コンポーネントのリンクが 12 か月分生成されているか確認
-		const links = queryAllByRole('link');
+		const links = getAllByTestId('btnNav');
 		expect(links.length).toBe(12);
 
 		// 2. Nav コンポーネントの現在月の次の月を押して Store が切り替わるか確認
@@ -42,7 +39,7 @@ describe('Nav コンポーネントと Bg コンポーネントの月変更連�
 		await waitFor(() => {
 			const bg = getByTestId('bg');
 			const regexp = new RegExp(`${monthString}.webp`);
-			expect(bg.getAttribute('srcset')).toMatch(regexp);
+			expect(bg.getAttribute('src')).toMatch(regexp);
 		}, { timeout: 100 });
 	});
 });
